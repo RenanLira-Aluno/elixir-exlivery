@@ -17,6 +17,10 @@ defmodule Exlivery.Orders.Order do
      }}
   end
 
+  def build(_user, _itens) do
+    {:error, "parametros inválidos"}
+  end
+
   defp calcula_preco_total(items) do
     Enum.reduce(items, Decimal.new("0.00"), fn item, acc ->
       item.preco
