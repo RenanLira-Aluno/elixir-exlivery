@@ -24,7 +24,8 @@ defmodule Exlivery.MixProject do
     [
       {:decimal, "~> 2.0"},
       {:ex_machina, "~> 2.7.0"},
-      {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
+      { :elixir_uuid, "~> 1.2" }
     ]
   end
 
