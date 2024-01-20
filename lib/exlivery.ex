@@ -13,4 +13,5 @@ defmodule Exlivery do
   defdelegate create_order(params), to: OrderCreateOrUpdate, as: :call
   defdelegate get_user(cpf), to: UserAgent, as: :get
   defdelegate get_order(id), to: OrderAgent, as: :get
+  defdelegate get_all_order, to: OrderAgent, as: :get
 end

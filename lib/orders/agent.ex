@@ -18,6 +18,8 @@ defmodule Exlivery.Orders.Agent do
     Agent.get(__MODULE__, &get_order(&1, id))
   end
 
+  def get(), do: Agent.get(__MODULE__, & &1)
+
   defp get_order(state, id) do
     state
     |> Map.get(id)
